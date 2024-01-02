@@ -1,0 +1,437 @@
+/* Hide the scrollbar track (the area the scrollbar moves in)
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+ */
+
+ body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+ .myposter{
+    cursor:pointer;
+ }
+
+
+  #cover-image {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .coppybut{
+    opacity:1;
+    color:white;
+  }
+  .coppybut:hover{
+    opacity:0.8;
+  }
+  
+  .text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  color: white;
+  text-align: left;
+  }
+  
+  
+  .material-symbols-outlined {
+    position: absolute;
+    display:grid;
+    top: 85%;
+    left:47%;
+    z-index:1;
+    transform:scale(0.7);
+  }
+    
+  #res{
+    height:1120px;
+  }
+
+  #circ{
+        width: 100%;
+        height:100%;
+        margin-top: 15%;
+        overflow: hidden;
+        font-size: 2vmin;
+        font-family: 'cousine',monospace;
+        text-transform: uppercase;
+        animation: spin 14s linear infinite;
+        color: black;
+    }
+    @keyframes spin{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+  .card{
+  transition: all 0.2s;
+  }
+  
+  .scroll-container{
+    opacity:0;
+    transform:translateX(-100%);
+  }
+  .scroll-container.show{
+    opacity:1;
+    transform:translateX(0);
+    transition:1.5s;
+  }
+  
+  .scroll-container2{
+    opacity:0;
+    transform:translateX(100%);
+  }
+  .scroll-container2.show{
+    opacity:1;
+    transform:translateX(0);
+    transition:1.5s;
+  }
+  
+  .scroll-container3{
+    opacity:0;
+    transform:translateX(-100%);
+  }
+  .scroll-container3.show{
+    opacity:1;
+    transform:translateX(0);
+    transition:1.5s;
+  }
+  .projcard{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  .projcard:hover{
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
+  .educard:hover{
+    background-color:rgba(166, 198, 252, 0.234);
+  }
+  .card:hover {
+    transition: all 0.2s;
+  }
+  .spcard{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  .spcard:hover{
+    transition: all 0.2s;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    background-color: #e4f7f7;
+    transform:scale(1.01)
+  }
+  .card:hover::after {
+    transition: all 0.2s;
+  }
+  .card:active {
+    transition: all 0.2s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: #e4f7f7;
+    }
+    .custom-no-gutters {
+      margin-right: 0%;
+      margin-left: 00%;
+    }
+    
+    .custom-no-gutters [class^="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  /* code below for back to top dynamic button*/
+  #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      border-radius: 50%;
+      background-color: #007bbf;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  
+
+  .buttontopb {
+      width: 5vw; /* Adjust the width of the button as needed */
+      height: 10vh;
+      position: relative;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+      transition: filter 250ms;
+      user-select: none;
+      touch-action: manipulation;
+     }
+     
+     .shadowtopb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: hsl(0deg 0% 0% / 0.25);
+      will-change: transform;
+      transform: translateY(2px);
+      transition: transform
+         600ms
+         cubic-bezier(.3, .7, .4, 1);
+     }
+     
+     .edgetopb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: linear-gradient(
+         to left,
+         hsl(340deg 100% 16%) 0%,
+         hsl(340deg 100% 32%) 8%,
+         hsl(340deg 100% 32%) 92%,
+         hsl(340deg 100% 16%) 100%
+       );
+     }
+     
+     .fronttopb {
+      width: 100%; /* Set the width to 100% to fill the span element */
+      height: 100%;
+  
+      display: block;
+      position: relative;
+      padding: 24px 35px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: white;
+      background: hsl(345deg 100% 47%);
+      will-change: transform;
+      transform: translateY(-6px);
+      transition: transform
+         600ms
+         cubic-bezier(.3, .7, .4, 1);
+     }
+     
+     .buttontopb:hover {
+      filter: brightness(110%);
+     }
+     
+     .buttontopb:hover .fronttopb {
+      transform: translateY(-6px);
+      transition: transform
+         250ms
+         cubic-bezier(.3, .7, .4, 1.5);
+     }
+     
+     .buttontopb:active .fronttopb {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+     }
+     
+     .buttontopb:hover .shadowtopb {
+      transform: translateY(4px);
+      transition: transform
+         250ms
+         cubic-bezier(.3, .7, .4, 1.5);
+     }
+     
+     .buttontopb:active .shadowtopb {
+      transform: translateY(1px);
+      transition: transform 34ms;
+     }
+     
+     .buttontopb:focus:not(:focus-visible) {
+      outline: none;
+     }
+  
+     .btno {
+      /* Button styles */
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: box-shadow 0.3s;
+      border-radius:5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+    
+    .btno:hover {
+      /* Shadow styles on hover */
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    }
+    
+    .btno:active {
+      /* Shadow styles when clicked */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    footer{
+      background-color: rgb(63, 127, 231);
+      color:white;
+    }
+  .contact-links{
+    margin:1cm;
+  }
+  .clicklinks{
+    text-decoration: none;
+  }
+  .clickables{
+    border:solid rgba(0, 124, 191, 0.4) 1px;
+    padding:0.5cm;
+    border-radius:0.25cm;
+  }
+  .clickables:hover{
+    border:solid rgba(0, 124, 191, 0.4) 2px;
+  }
+    #sign{
+      margin:5%;
+    }
+  
+    .ctcme{
+      transform:translateX(-28%);
+    }
+    #ph-cpy,#em-cpy{
+      transform:scale(0.4);
+    }
+  
+    @media only screen and (max-width: 600px) {
+      .secrow{
+        transform:translateX(15%);
+      }
+    }
+  
+  #logos{
+    margin-right:0.5cm;
+    width:1cm;
+    height:1cm;
+  }
+  .loading {
+    display: flex; /* Change from grid to flex */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* Ensure the overlay is above other content */
+  }
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #090303;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #2b3fd8;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .material-symbols-outlined {
+    position: absolute;
+    display:grid;
+    top: 85%;
+    left:40%;
+    z-index:1;
+    transform:scale(0.7);
+  }
+  #res{
+    height:110vw;
+  }
+  
+  .text-overlay{
+    transform:scale(0.8) translateX(-20%);
+  }
+  #cover-image{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform:translateX(-50%);
+    overflow-x: visible;
+  }
+  .loading {
+    overflow:visible;
+    width:300vw;
+    height:300vh;
+    transform:translateX(-20%)translateY(-20%);
+  }
+  }

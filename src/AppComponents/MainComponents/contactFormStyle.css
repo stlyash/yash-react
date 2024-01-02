@@ -1,0 +1,122 @@
+.input-container {
+    --c-text: rgb(50, 50, 80);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45 , 190);
+    display: grid;
+    gap: 1ch;
+    position: relative;
+    max-width: 190px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+  }
+  .cbody{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .input-field {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 100%;
+  }
+  
+  .input-field:not(:placeholder-shown) + .input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+  }
+  
+  
+  
+  .input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+  }
+  
+  .input-field:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+  }
+  
+  .input-label {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+  }
+  
+  tr{
+      width:100%;
+  }
+  .cbody{
+      display:grid;
+      place-items: center;
+  }
+  .cbutton {
+   appearance: button;
+   background-color: #1899D6;
+   border: solid transparent;
+   border-radius: 16px;
+   border-width: 0 0 4px;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 15px;
+   font-weight: 700;
+   letter-spacing: .8px;
+   line-height: 20px;
+   margin: 0;
+   outline: none;
+   overflow: visible;
+   padding: 13px 19px;
+   text-align: center;
+   text-transform: uppercase;
+   touch-action: manipulation;
+   transform: translateZ(0) translateX(50%);
+   transition: filter .2s;
+   user-select: none;
+   -webkit-user-select: none;
+   vertical-align: middle;
+   white-space: nowrap;
+  }
+  
+  .cbutton:after {
+   background-clip: padding-box;
+   background-color: #1CB0F6;
+   border: solid transparent;
+   border-radius: 16px;
+   border-width: 0 0 4px;
+   bottom: -4px;
+   content: "";
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: -1;
+  }
+  
+  .cbutton:main, button:focus {
+   user-select: auto;
+  }
+  
+  .cbutton:hover:not(:disabled) {
+   filter: brightness(1.1);
+  }
+  
+  .cbutton:disabled {
+   cursor: auto;
+  }
+  
+  .cbutton:active:after {
+   border-width: 0 0 0px;
+  }
+  
+  .cbutton:active {
+   padding-bottom: 10px;
+  }
+  
+  .cform{
+      border:solid 1px grey;
+      padding:0.5cm 1.5cm 0.5cm 0.5cm;
+      border-radius:0.5cm
+  }
