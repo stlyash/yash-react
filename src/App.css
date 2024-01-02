@@ -435,3 +435,57 @@
     transform:translateX(-20%)translateY(-20%);
   }
   }
+
+
+
+  .redes {
+    width: 80px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+  
+  .redes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .redes a svg {
+    width: 30px;
+    fill: #ffffff;
+  }
+  
+  .redes .whatsapp {
+    background-color: #25D366;
+    
+  }
+  
+  .redes .instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+    border-radius: 0 10px 0 0;
+  }
+  .redes .twitter {
+    background-color: #000000;
+  }
+  
+  .redes .facebook {
+    background-color: #006aff;
+  }
+  .redes .linkedin {
+    background-color: #0077b5;
+    border-radius: 0 0 10px 0;
+  }
+  
+  .redes a:hover {
+    width: 130%;
+    border-radius: 0 10px 10px 0;
+  }
+  

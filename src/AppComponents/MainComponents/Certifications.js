@@ -27,6 +27,7 @@ export const Certifications = () => {
                         <li>Programming in JavaScript		[<Link rel="noopener noreferrer" to="https://www.coursera.org/account/accomplishments/certificate/C88VKZ6WCGKZ" target="_blank">Link</Link>]</li>
                         <li>Version Control		[<Link rel="noopener noreferrer" to="https://www.coursera.org/account/accomplishments/certificate/NL8JSWH2D3D5" target="_blank">Link</Link>]</li>
                         <li>HTML and CSS in Depth    [<Link rel="noopener noreferrer" to="https://www.coursera.org/account/accomplishments/certificate/K9RNQEWEMYNC" target="_blank">Link</Link>]</li>
+                        <li>React Basics    [<Link rel="noopener noreferrer" to="https://www.coursera.org/account/accomplishments/certificate/TNEHZQF8JF69" target="_blank">Link</Link>]</li>
                     </ul>
                 </div>
             </div>
