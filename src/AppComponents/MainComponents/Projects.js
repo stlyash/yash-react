@@ -8,6 +8,8 @@ import reactweb from './ProjectAssetss/new-react.png';
 import stlprime from './ProjectAssetss/stl-prime.png';
 import deter from './ProjectAssetss/deter.png';
 import polrec from './ProjectAssetss/polar-rect.png';
+import yashfm from './ProjectAssetss/yashfm.png';
+import reactgate from './ProjectAssetss/reactgate.png';
 //---------------------------------------------------------------------------
 export const Projects = () => {
   const [webState, setWebState] = useState(true);
@@ -18,19 +20,34 @@ export const Projects = () => {
   const projects=
     [
       {
+        title:"Online Audio Player using React.Js",
+        image:yashfm,
+        desc:"A platform for listening song without login and ads.",
+        link:"https://yashfm.netlify.app",
+        type:"web"
+      },
+      {
+        title:"Mock GATE Exam using React.Js [Ongoing Project]",
+        image:reactgate,
+        desc:"A platform for students to give mock GATE Exam.",
+        link:"https://reactgate.netlify.app",
+        type:"web"
+      },
+      {
+        title:"My React Website",
+        image:reactweb,
+        desc:"Developed my personal website using React.Js and Bootstrap",
+        link:"https://yashasvi.dev",
+        type:"web"
+      },
+      {
         title:"Driving Technique",
         image:drivinglogo,
         desc:"Website for Evaluation of Driving Technique of Loco Pilots",
         link:"https://stlyash.github.io/Driving/",
         type:"web"
       },
-      {
-        title:"My React Website",
-        image:reactweb,
-        desc:"Created my personal website using React and Bootstrap",
-        link:"https://www.yashasvi.dev",
-        type:"web"
-      },
+      
       {
         title:"STL C++ App",
         image:cppStlLogo,
