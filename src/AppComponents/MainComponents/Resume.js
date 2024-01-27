@@ -27,7 +27,7 @@ function scrollToTop() {
 }
 export const Resume = () => {
   return (
-    <>
+    <div className='whole-res'>
     <button  className="buttontopb" id="scrollToTopBtn" style={{zIndex: "5"}} onClick={()=>scrollToTop()}>
   <span className="shadowtopb"></span>
   <span className="edgetopb"></span>
@@ -49,6 +49,6 @@ export const Resume = () => {
       </button>
     </div>
     </div>
-  </>
+  </div>
   )
 }

@@ -17,7 +17,7 @@ export const Footer = () => {
   };
 
   return (
-    <div>
+    <div className='web-foot'>
       <div className="row" style={{ color:"white",alignItems: "center",backgroundColor: "rgb(66, 135, 245)" }}>
         <div className="col firstrow" style={{ margin: "3%" }}>
           <img id="sign" alt="Signature of Yashasvi" src={sign} />

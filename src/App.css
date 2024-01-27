@@ -13,6 +13,26 @@
 }
  */
 
+ @keyframes fade-in-left {
+  0%{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+ }
+ @keyframes fade-in-right {
+  0%{
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+ }
  body {
     margin: 0;
     padding: 0;
@@ -45,7 +65,9 @@
   color: white;
   text-align: left;
   }
-  
+  .web-foot{
+    overflow-x: hidden;
+  }
   
   .material-symbols-outlined {
     position: absolute;
@@ -81,34 +103,15 @@
   }
   
   .scroll-container{
-    opacity:0;
-    transform:translateX(-100%);
+    animation: fade-in-right 2s ease-in;
   }
-  .scroll-container.show{
-    opacity:1;
-    transform:translateX(0);
-    transition:1.5s;
-  }
-  
   .scroll-container2{
-    opacity:0;
-    transform:translateX(100%);
+    animation: fade-in-left 2s ease-in;
   }
-  .scroll-container2.show{
-    opacity:1;
-    transform:translateX(0);
-    transition:1.5s;
-  }
-  
   .scroll-container3{
-    opacity:0;
-    transform:translateX(-100%);
+    animation: fade-in-right 2s ease-in;
   }
-  .scroll-container3.show{
-    opacity:1;
-    transform:translateX(0);
-    transition:1.5s;
-  }
+
   .projcard{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
@@ -313,6 +316,8 @@
       .secrow{
         transform:translateX(15%);
       }
+
+
     }
   
   #logos{
@@ -411,6 +416,7 @@
     left:40%;
     z-index:1;
     transform:scale(0.7);
+    
   }
   #res{
     height:110vw;
@@ -436,10 +442,12 @@
   }
   }
 
-
+#nav-bar{
+  width: 100vw;
+}
 
   .redes {
-    width: 80px;
+    width: 60px;
     height: auto;
     position: fixed;
     top: 50%;
@@ -488,4 +496,11 @@
     width: 130%;
     border-radius: 0 10px 10px 0;
   }
-  
+  @media only screen and (max-width: 600px) {
+    .redes a:hover {
+      width: 100%;
+    }
+    .redes {
+      width: 40px;
+    }
+  }

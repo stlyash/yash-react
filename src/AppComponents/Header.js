@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import {Link} from "react-router-dom";
 // Making the nav bar names bold on scroll
 var collapsed = 0;
@@ -9,6 +9,7 @@ window.addEventListener('scroll', function() {
   const firstel = document.querySelector(".shadowtopb");
   const secondel = document.querySelector(".edgetopb");
   const thirdel = document.querySelector(".buttontopb");
+  
   
   firstel.style.width = master.offsetWidth + "px";
   secondel.style.width = master.offsetWidth + "px";
@@ -97,7 +98,7 @@ window.addEventListener('scroll', function() {
     button.click();
       }
       // Delay the expansion after 2 seconds
-      setTimeout(expandCollapsible, 1000);
+      setTimeout(expandCollapsible, 700);
       collapsed=1;
       }
   
@@ -107,6 +108,8 @@ window.addEventListener('scroll', function() {
   });
 
 export const Header = () => {
+  const buttonRef = useRef(null);
+
   const scrollToTarget = (elementId) => {
     const targetElement = document.getElementById(elementId);
 
@@ -117,6 +120,7 @@ export const Header = () => {
         behavior: 'smooth',
       });
     }
+    buttonRef.current.click();    
   };
 
   return (
@@ -129,7 +133,7 @@ export const Header = () => {
           </button>
           <div className="offcanvas offcanvas-end" style={{ backgroundColor: "rgb(0, 123, 191)" }} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button ref={buttonRef} type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
               <ul style={{ fontSize: "large" }} className="navbar-nav justify-content-end flex-grow-1 pe-3">

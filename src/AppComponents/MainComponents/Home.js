@@ -3,6 +3,17 @@ import cover from './asdf.jpg'; // Adjust the path as needed
 import expand from './main_assets/expand-more.png'; // Adjust the path as needed
 import {Link} from "react-router-dom";
 export const Home = () => {
+  const scrollToTarget = (elementId) => {
+    const targetElement = document.getElementById(elementId);
+
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect();
+      window.scrollTo({
+        top: elementPosition.top + window.scrollY - 35,
+        behavior: 'smooth',
+      });
+    }
+  };
   const salTransx = 24;
   const imgRef = useRef(null);
   const salRef = useRef(null);
@@ -85,7 +96,7 @@ export const Home = () => {
           alt="Cover"
         />
         <span className="material-symbols-outlined">
-          <Link to="#experiences-section">
+          <Link  onClick={()=>scrollToTarget("experiences-section")}>
             <img src={expand} alt="Down Arrow" />
           </Link>
         </span>

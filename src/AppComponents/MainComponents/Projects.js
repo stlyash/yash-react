@@ -121,7 +121,7 @@ export const Projects = () => {
   };
 
   return (
-    <div>
+    <div className='whole-proj'>
       <h2 id="project-section" className="text-primary " 
       style={{paddingBottom: "2%",paddingLeft: "10%",paddingTop:"6%"}}>
         Projects

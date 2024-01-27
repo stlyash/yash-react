@@ -1,36 +1,5 @@
 import React from 'react'
 
-
-window.addEventListener('scroll', function() {
-  var eduframe = document.querySelector('.scroll-container');
-  var eduframe2 = document.querySelector('.scroll-container2');
-  var recta = eduframe.getBoundingClientRect();
-  if (recta.top <= window.innerHeight && recta.bottom >= window.innerHeight) {
-    eduframe.classList.add('show');
-    eduframe2.classList.add('show');
-  }
-});
-
-window.addEventListener('scroll', function() {
-  var eduframe = document.querySelector('.scroll-container');
-  var eduframe2 = document.querySelector('.scroll-container2');
-  var recta2 = eduframe2.getBoundingClientRect();
-  if (recta2.top <= window.innerHeight && recta2.bottom >= window.innerHeight) {
-    eduframe2.classList.add('show');
-    eduframe.classList.add('show');
-  }
-});
-
-window.addEventListener('scroll', function() {
-  var eduframe = document.querySelector('.scroll-container');
-  var eduframe3 = document.querySelector('.scroll-container3');
-  var recta3 = eduframe3.getBoundingClientRect();
-  if (recta3.top <= window.innerHeight && recta3.bottom >= window.innerHeight) {
-    eduframe3.classList.add('show');
-    eduframe.classList.add('show');
-  }
-});
-
 export const Internships = () => {
   return (
     <div id="whole-experience">
