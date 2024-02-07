@@ -38,7 +38,10 @@ export const ContactMe = () => {
         className="clicklinks" target="_blank" rel="noopener noreferrer">
         <div className="contact-links">
           <span className="clickables">
-          <img id="logos" src={pstoreLogo} 
+          <img data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      data-bs-title="Use the keyboard to navigate to the relevant section by pressing the corresponding keys."
+                       id="logos" src={pstoreLogo} 
           alt="Google Play Store Logo"/>
           Google Play Store 🔗</span>
         </div></Link>

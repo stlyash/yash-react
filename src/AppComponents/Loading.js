@@ -6,7 +6,7 @@ export const Loading = props => {
 
   return (
     <div className='loading' style={{ ...displayStyle, zIndex: '101',
-    width:"100vh",height:"100%"}}>
+    width:"100vw",height:"100%"}}>
       <span className="loader"></span>
     </div>
   );

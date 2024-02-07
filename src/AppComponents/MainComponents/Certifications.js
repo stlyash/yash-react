@@ -12,7 +12,7 @@ export const Certifications = () => {
 
         <div className="accordion-item">
           <h2 className="accordion-header">
-            <button id='collapseOneButton' className="colabutton accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button id='collapseOneButton' className="colabutton accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
             <h5>1. Meta Front-End Development Professional Certificate</h5>
             </button>
           </h2>
@@ -31,7 +31,7 @@ export const Certifications = () => {
 
         <div className="accordion-item">
           <h2 className="accordion-header">
-            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
             <h5>2. Google Data Analytics Professional Certificate</h5>
             </button>
           </h2>
