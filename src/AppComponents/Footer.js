@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import copyim from "./footer_assets/copy.png";
 import doneim from "./footer_assets/done.png";
@@ -7,6 +7,7 @@ import sign from "./footer_assets/signature.png";
 export const Footer = () => {
   const [emailCopyStatus, setEmailCopyStatus] = useState(copyim);
   const [phoneCopyStatus, setPhoneCopyStatus] = useState(copyim);
+  const [onPhone, setOnPhone] = useState(false);
 
   const copyText = (text, setStatus) => {
     navigator.clipboard
@@ -15,6 +16,19 @@ export const Footer = () => {
       .catch((error) => console.error("Copy failed:", error));
     setTimeout(() => setStatus(copyim), 3000);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setOnPhone(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="web-foot">
@@ -32,22 +46,24 @@ export const Footer = () => {
 
         <div
           className="col ctcme secrow"
-          style={{ margin: "3%", textAlign: "center", marginRight: "20%" }}
+          style={{ margin: "3%", marginRight: "20%" }}
         >
           <h3 id="cont">Contact Me</h3>
           <button
             className="coppybut"
             style={{ padding: 0, border: 0, backgroundColor: "transparent" }}
-            onClick={() => copyText("yash@yashasvi.dev", setEmailCopyStatus)}
+            onClick={() =>
+              copyText("kmryashasvi@gmail.com", setEmailCopyStatus)
+            }
           >
-            yash@yashasvi.dev
+            kmryashasvi@gmail.com
             <img id="em-cpy" src={emailCopyStatus} alt="Copy Button" />
           </button>
-          |
+          {!onPhone ? "|" : ""}
+          {onPhone ?<br />: ""}
           <button
             className="coppybut"
             style={{
-              paddingLeft: "0.4cm",
               border: 0,
               backgroundColor: "transparent",
             }}
@@ -60,7 +76,13 @@ export const Footer = () => {
         <div
           style={{ height: "1px", backgroundColor: "rgb(148, 168, 223)" }}
         ></div>
-        <span style={{ textAlign: "center", margin: "2%" }}>
+        <span
+          style={
+            onPhone
+              ? { textAlign: "left", margin: "2%" }
+              : { textAlign: "center", margin: "2%" }
+          }
+        >
           <Link
             rel="noopener noreferrer"
             target="_blank"
@@ -73,7 +95,13 @@ export const Footer = () => {
         <div
           style={{ height: "1px", backgroundColor: "rgb(148, 168, 223)" }}
         ></div>
-        <span style={{ textAlign: "center", margin: "2%" }}>
+        <span
+          style={
+            onPhone
+              ? { textAlign: "left", margin: "2%" }
+              : { textAlign: "center", margin: "2%" }
+          }
+        >
           Previous Versions:
           <Link
             rel="noopener noreferrer"

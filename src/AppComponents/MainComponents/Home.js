@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import cover from "./asdf.jpg"; // Adjust the path as needed
+import React from "react";
 import expand from "./main_assets/expand-more.png"; // Adjust the path as needed
 import { Link } from "react-router-dom";
 export const Home = () => {
@@ -12,18 +11,6 @@ export const Home = () => {
         top: elementPosition.top + window.scrollY,
         behavior: "smooth",
       });
-    }
-  };
-  const salTransx = 24;
-  const imgRef = useRef(null);
-  const salRef = useRef(null);
-
-  const zoomInd = () => {
-    if (imgRef.current && salRef.current) {
-      imgRef.current.style.transform = "scale(4) translate(-17%, 15%)";
-      salRef.current.style.transform = `scale(0.8) translate(${
-        -1 * salTransx
-      }%, 0%)`;
     }
   };
   return (
@@ -105,34 +92,36 @@ export const Home = () => {
         </Link>
       </div>
 
-      <article
-        id="home-article"
-        style={{ overflow: "hidden" }}
-        onMouseOver={zoomInd}
-        /*onMouseOut={zoomoInd}*/
-      >
-        <img
-          ref={imgRef}
-          id="cover-image"
-          style={{ transition: "transform 4s ease" }}
-          src={cover}
-          alt="Cover"
-        />
+      <article id="home-article" style={{ overflow: "hidden" }}>
+        <div id="cover-image" style={{ overflow: "hidden" }}>
+          {/* <ul className="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul> */}
+          <div id="bubbles"></div>
+          <div id="bubbles2"></div>
+          <div id="bubbles3"></div>
+        </div>
         <span className="material-symbols-outlined">
           <Link onClick={() => scrollToTarget("experiences-section")}>
             <img src={expand} alt="Down Arrow" />
           </Link>
         </span>
-
         <div
-          ref={salRef}
           id="salutation"
           className="text-overlay"
           style={{
             padding: "20px",
             borderRadius: "0.3cm",
             transition: "transform 4s ease",
-            backgroundColor: "rgba(0, 0, 0)",
           }}
         >
           <div style={{ fontSize: "60px" }}>

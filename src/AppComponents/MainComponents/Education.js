@@ -22,8 +22,6 @@ export const Education = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show-elementsu");
-          } else {
-            entry.target.classList.remove("show-elementsu");
           }
         });
       });
