@@ -9,7 +9,7 @@ export const Home = () => {
     if (targetElement) {
       const elementPosition = targetElement.getBoundingClientRect();
       window.scrollTo({
-        top: elementPosition.top + window.scrollY - 35,
+        top: elementPosition.top + window.scrollY,
         behavior: "smooth",
       });
     }
@@ -26,14 +26,6 @@ export const Home = () => {
       }%, 0%)`;
     }
   };
-
-  /*const zoomoInd = () => {
-    if (imgRef.current && salRef.current) {
-      imgRef.current.style.transform = 'scale(1)';
-      salRef.current.style.transform = `scale(1) translate(${salTransx - 24}%, 0%)`;
-      salRef.current.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-    }
-  };*/
   return (
     <div>
       <div class="redes">
@@ -144,7 +136,9 @@ export const Home = () => {
           }}
         >
           <div style={{ fontSize: "60px" }}>
-            <b>Hello, I'm <span className="myName">Yashasvi</span>, </b>
+            <b>
+              Hello, I'm <span className="myName">Yashasvi,</span>
+            </b>
           </div>
           <br />
           <h4>I am a Web Developer and I love React.</h4>

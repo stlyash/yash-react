@@ -3,7 +3,7 @@ import React from 'react'
 const Article = (props) => {
   return (
     <div style={{ paddingLeft: '10%', paddingRight: '10%', paddingTop: '2%' }}>
-      <div className="card educard">
+      <div className="card educard hidden-elementsu">
         <div className="card-body">
           <h4 className="card-title">{props.title}</h4>
           <h6 className="card-subtitle mb-2 text-body-secondary">{props.subtitle}</h6>
@@ -18,6 +18,18 @@ const Article = (props) => {
 };
 
 export const Education = () => {
+      const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-elementsu");
+          } else {
+            entry.target.classList.remove("show-elementsu");
+          }
+        });
+      });
+      const hiddenElements2 = document.querySelectorAll(".hidden-elementsu");
+      hiddenElements2.forEach((el) => observer2.observe(el));
+  
   return (
     <div id="all-educations">
     <h2 id="edu-section"style={{paddingLeft: "10%",paddingRight: "10%",paddingTop:"6%"}}className="text-primary unselect">Education</h2>

@@ -4,6 +4,19 @@ export const Internships = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
   const [isExpanded3, setIsExpanded3] = useState(false);
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show-elementss");
+      } else {
+        entry.target.classList.remove("show-elementss");
+      }
+    });
+  });
+  const hiddenElements = document.querySelectorAll('.hidden-elementss');
+  hiddenElements.forEach((el)=>observer.observe(el));
+
   return (
     <div id="whole-experience">
       <h2
@@ -18,7 +31,7 @@ export const Internships = () => {
         id="whole-experience"
       >
         <div style={{ paddingBottom: "2%" }}>
-          <div className="scroll-container">
+          <div className="scroll-container hidden-elementss">
             <div className="scroll-element">
               <h4>Summer Internship - Eastern Railways, Indian Railways</h4>
               <h6 className="card-subtitle mb-2 text-body-secondary">
@@ -89,7 +102,7 @@ export const Internships = () => {
 
           <br />
 
-          <div className="scroll-container2">
+          <div className="scroll-container2 hidden-elementss">
             <div className="scroll-element">
               <h4>Summer Internship - Electric Loco Shed, Vadodara</h4>
               <h6 className="card-subtitle mb-2 text-body-secondary">
@@ -150,7 +163,7 @@ export const Internships = () => {
 
           <br />
 
-          <div className="scroll-container3">
+          <div className="scroll-container3 hidden-elementss">
             <div className="scroll-element">
               <h4>
                 Summer Internship - Vandhana International Pvt. Ltd., New Delhi

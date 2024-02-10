@@ -40,6 +40,8 @@ body {
 }
 .myposter {
   cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 #cover-image {
@@ -100,6 +102,27 @@ body {
 .card {
   transition: all 0.2s;
 }
+.hidden-elementss {
+  opacity: 0;
+  transition: all 0.7s;
+  transform: translateX(50%);
+}
+.show-elementss {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.hidden-elementsu {
+  opacity: 0;
+  transition: all 0.7s;
+  transform: translateY(100%);
+}
+.web-link {
+  margin-left: 0.2cm;
+}
+.show-elementsu {
+  opacity: 1;
+  transform: translateY(0%);
+}
 
 .scroll-container {
   animation: fade-in-right 2s ease-in;
@@ -125,7 +148,10 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-
+.project-panel {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
 .projcard {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
@@ -158,6 +184,8 @@ body {
 .custom-no-gutters {
   margin-right: 0%;
   margin-left: 00%;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .custom-no-gutters [class^="col-"] {
@@ -441,7 +469,6 @@ footer {
     overflow: visible;
     width: 300vw;
     height: 300vh;
-    transform: translateX(-20%) translateY(-20%);
   }
 }
 

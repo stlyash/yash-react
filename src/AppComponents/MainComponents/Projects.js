@@ -91,7 +91,7 @@ export const Projects = () => {
         type:"python"
       }
     ]
-
+    
   const tabPressed = (tab) => {
     if (tab === 'Web') {
       setWebState(true);
@@ -121,42 +121,100 @@ export const Projects = () => {
   };
 
   return (
-    <div className='whole-proj'>
-      <h2 id="project-section" className="text-primary " 
-      style={{paddingBottom: "2%",paddingLeft: "10%",paddingTop:"6%"}}>
+    <div className="whole-proj">
+      <h2
+        id="project-section"
+        className="text-primary "
+        style={{ paddingBottom: "2%", paddingLeft: "10%", paddingTop: "6%" }}
+      >
         Projects
       </h2>
 
-      <article id="all-projects" style={{margin:"0 12%",backgroundColor:"rgb(63, 127, 231,0.1)"}}>
-        <div className='container-fluid'style={{padding:"0",border:"solid 2px rgb(63, 127, 231)",borderRadius:"0.7em"}}>
-          <div className='row custom-no-gutters'>
-            
-          <div className='col-4  myposter' onClick={()=>tabPressed("Web")}>
-            <h4 style={{borderBottom: webState? "solid 1px rgb(63, 127, 231)" : "none",
-            textAlign:"center",backgroundColor:`rgb(63, 127, 231,${webState?0.2:0.1})`,
-            paddingTop:"1em",paddingBottom:"1em"}}>Web</h4>
-          </div>
-          <div className='col-4  myposter' onClick={()=>tabPressed("Android")}>
-            <h4 style={{borderBottom: androidState ? "solid 1px rgb(63, 127, 231)" : "none",
-            borderLeft:"solid 1px rgb(63, 127, 231,0.2)",borderRight:"solid 1px rgb(63, 127, 231,0.2)",
-            textAlign:"center",backgroundColor:`rgb(63, 127, 231,${androidState?0.2:0.1})`,
-            paddingTop:"1em",paddingBottom:"1em"}}>Android</h4>
-          </div>
-          <div className='col-4 myposter' onClick={()=>tabPressed("Python")}>
-            <h4 style={{borderBottom: pythonState ? "solid 1px rgb(63, 127, 231)" : "none",
-            textAlign:"center",backgroundColor:`rgb(63, 127, 231,${pythonState?0.2:0.1})`,
-            paddingTop:"1em",paddingBottom:"1em"}}>Python</h4>
-          </div>
+      <article
+        id="all-projects"
+        style={{
+          margin: "0 12%",
+          backgroundColor: "rgb(63, 127, 231,0.1)",
+          borderRadius: "0.7em",
+        }}
+      >
+        <div
+          className="container-fluid"
+          style={{
+            padding: "0",
+            border: "solid 2px rgb(63, 127, 231)",
+            height: "100%"
+          }}
+          id='hello'
+        >
+          <div className="row custom-no-gutters select-proj">
+            <div className="col-4  myposter" onClick={() => tabPressed("Web")}>
+              <h4
+                style={{
+                  borderBottom: webState
+                    ? "solid 1px rgb(63, 127, 231)"
+                    : "none",
+                  height: "100%",
+                  textAlign: "center",
+                  backgroundColor: `rgb(63, 127, 231,${webState ? 0.2 : 0.1})`,
+                  paddingTop: "1em",
+                  paddingBottom: "1em",
+                }}
+              >
+                Web
+              </h4>
+            </div>
+            <div
+              className="col-4  myposter"
+              onClick={() => tabPressed("Android")}
+            >
+              <h4
+                style={{
+                  borderBottom: androidState
+                    ? "solid 1px rgb(63, 127, 231)"
+                    : "none",
+                  height: "100%",
+                  borderLeft: "solid 1px rgb(63, 127, 231,0.2)",
+                  borderRight: "solid 1px rgb(63, 127, 231,0.2)",
+                  textAlign: "center",
+                  backgroundColor: `rgb(63, 127, 231,${
+                    androidState ? 0.2 : 0.1
+                  })`,
+                  paddingTop: "1em",
+                  paddingBottom: "1em",
+                }}
+              >
+                Android
+              </h4>
+            </div>
+            <div
+              className="col-4 myposter"
+              onClick={() => tabPressed("Python")}
+            >
+              <h4
+                style={{
+                  borderBottom: pythonState
+                    ? "solid 1px rgb(63, 127, 231)"
+                    : "none",
+                  height: "100%",
+                  textAlign: "center",
+                  backgroundColor: `rgb(63, 127, 231,${
+                    pythonState ? 0.2 : 0.1
+                  })`,
+                  paddingTop: "1em",
+                  paddingBottom: "1em",
+                }}
+              >
+                Python
+              </h4>
+            </div>
           </div>
 
-          <div className='container-fluid'>
-            <div className="row">
-              {renderCards()}
-            </div>
+          <div className="container-fluid project-panel">
+            <div className="row">{renderCards()}</div>
           </div>
         </div>
       </article>
-
     </div>
   );
 };
