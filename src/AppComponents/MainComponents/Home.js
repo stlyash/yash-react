@@ -94,18 +94,6 @@ export const Home = () => {
 
       <article id="home-article" style={{ overflow: "hidden" }}>
         <div id="cover-image" style={{ overflow: "hidden" }}>
-          {/* <ul className="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul> */}
           <div id="bubbles"></div>
           <div id="bubbles2"></div>
           <div id="bubbles3"></div>
@@ -130,7 +118,7 @@ export const Home = () => {
             </b>
           </div>
           <br />
-          <h4>I am a Web Developer and I love React.</h4>
+          <h4>I am a Front-End Developer. I develop apps that sell.</h4>
         </div>
       </article>
     </div>

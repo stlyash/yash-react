@@ -1,15 +1,16 @@
-import React, { useState }  from 'react';
-import {ProjectCards} from './ProjectAssetss/ProjectCards.js';
-import cppStlLogo from './ProjectAssetss/cpp-stl-logo.png';
-import drivinglogo from './ProjectAssetss/new-driving.png';
-import matrixlogo from './ProjectAssetss/matrix-man-logo.png';
-import resumesc from './ProjectAssetss/resume-parser.png';
-import reactweb from './ProjectAssetss/new-react.png';
-import stlprime from './ProjectAssetss/stl-prime.png';
-import deter from './ProjectAssetss/deter.png';
-import polrec from './ProjectAssetss/polar-rect.png';
-import yashfm from './ProjectAssetss/yashfm.png';
-import reactgate from './ProjectAssetss/reactgate.png';
+import React, { useState } from "react";
+import { ProjectCards } from "./ProjectAssetss/ProjectCards.js";
+import cppStlLogo from "./ProjectAssetss/cpp-stl-logo.png";
+import drivinglogo from "./ProjectAssetss/new-driving.png";
+import matrixlogo from "./ProjectAssetss/matrix-man-logo.png";
+import resumesc from "./ProjectAssetss/resume-parser.png";
+import reactweb from "./ProjectAssetss/new-react.png";
+import stlprime from "./ProjectAssetss/stl-prime.png";
+import deter from "./ProjectAssetss/deter.png";
+import polrec from "./ProjectAssetss/polar-rect.png";
+import yashfm from "./ProjectAssetss/yashfm.png";
+import reactgate from "./ProjectAssetss/reactgate.png";
+import openpap from "./ProjectAssetss/openpap.jpg";
 //---------------------------------------------------------------------------
 export const Projects = () => {
   const [webState, setWebState] = useState(true);
@@ -17,88 +18,94 @@ export const Projects = () => {
   const [pythonState, setPythonState] = useState(false);
   const [show, setShow] = useState("web");
 
-  const projects=
-    [
-      {
-        title:"Online Audio Player using React.Js",
-        image:yashfm,
-        desc:"A platform for listening song without login and ads.",
-        link:"https://yashfm.netlify.app",
-        type:"web"
-      },
-      {
-        title:"Mock GATE Exam using React.Js [Ongoing Project]",
-        image:reactgate,
-        desc:"A platform for students to give mock GATE Exam.",
-        link:"https://reactgate.netlify.app",
-        type:"web"
-      },
-      {
-        title:"My React Website",
-        image:reactweb,
-        desc:"Developed my personal website using React.Js and Bootstrap",
-        link:"https://yashasvi.dev",
-        type:"web"
-      },
-      {
-        title:"Driving Technique",
-        image:drivinglogo,
-        desc:"Website for Evaluation of Driving Technique of Loco Pilots",
-        link:"https://stlyash.github.io/Driving/",
-        type:"web"
-      },
-      
-      {
-        title:"STL C++ App",
-        image:cppStlLogo,
-        desc:"Developed an Android App which introduces STL libraries of C++ | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 1.5k (Oct,2023)",
-        link:"https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.stlcpp",
-        type:"android"
-      },
-      {
-        title:"STL Prime App",
-        image:stlprime,
-        desc:"Created a prime and paid version of the C++ STL App | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 13 (Oct,2023)",
-        link:"https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.webexp",
-        type:"android"
-      },
-      {
-        title:"Determinant Calculator",
-        image:deter,
-        desc:"An app that calculates determinant of order 2,3 and 4 | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 996 (Oct,2023)",
-        link:"https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.determinantCalculator",
-        type:"android"
-      },
-      {
-        title:"Polar to Rect. Form Converter",
-        image:polrec,
-        desc:`Created an App which converts Polar to Rectangular Coordinates and vice-versa | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 1.28k (Oct,2023)`,
-        link:"https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.rectangluarToPolarConv",
-        type:"android"
-      },
-      {
-        title:"Matrix Man App",
-        image:matrixlogo,
-        desc:"Created an App which can calculate Determinant, Inverse,etc. | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 406 (Oct,2023)",
-        link:"https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.MatrixMan",
-        type:"android"
-      },
-      {
-        title:"Resume Parser",
-        image:resumesc,
-        desc:"Developed a resume parser in Python using Spacy",
-        link:"https://colab.research.google.com/drive/1I3G8cj53AYda24XR8q4rn-6KJIF6h4OT?usp=sharing",
-        type:"python"
-      }
-    ]
-    
+  const projects = [
+    {
+      title: "Open Question Papers",
+      image: openpap,
+      desc: "Upload or Download Question papers of any exam.",
+      link: "https://openpapers.netlify.app",
+      type: "web",
+    },
+    {
+      title: "Online Song Player",
+      image: yashfm,
+      desc: "A platform for listening song without login and ads.",
+      link: "https://yashfm.netlify.app",
+      type: "web",
+    },
+    {
+      title: "GATE Exam [Ongoing]",
+      image: reactgate,
+      desc: "A platform for students to give mock GATE Exam.",
+      link: "https://reactgate.netlify.app",
+      type: "web",
+    },
+    {
+      title: "My React Website",
+      image: reactweb,
+      desc: "Developed my personal website using React.Js and Bootstrap",
+      link: "https://codemachine.tech",
+      type: "web",
+    },
+    {
+      title: "Driving Technique",
+      image: drivinglogo,
+      desc: "Website for Evaluation of Driving Technique of Loco Pilots",
+      link: "https://stlyash.github.io/Driving/",
+      type: "web",
+    },
+
+    {
+      title: "STL C++ App",
+      image: cppStlLogo,
+      desc: "Developed an Android App which introduces STL libraries of C++ | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 1.5k (Oct,2023)",
+      link: "https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.stlcpp",
+      type: "android",
+    },
+    {
+      title: "STL Prime App",
+      image: stlprime,
+      desc: "Created a prime and paid version of the C++ STL App | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 13 (Oct,2023)",
+      link: "https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.webexp",
+      type: "android",
+    },
+    {
+      title: "Determinant Calculator",
+      image: deter,
+      desc: "An app that calculates determinant of order 2,3 and 4 | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 996 (Oct,2023)",
+      link: "https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.determinantCalculator",
+      type: "android",
+    },
+    {
+      title: "Polar to Rect. Form Converter",
+      image: polrec,
+      desc: `Created an App which converts Polar to Rectangular Coordinates and vice-versa | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 1.28k (Oct,2023)`,
+      link: "https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.rectangluarToPolarConv",
+      type: "android",
+    },
+    {
+      title: "Matrix Man App",
+      image: matrixlogo,
+      desc: "Created an App which can calculate Determinant, Inverse,etc. | 𝗧𝗼𝘁𝗮𝗹 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝘀: 406 (Oct,2023)",
+      link: "https://play.google.com/store/apps/details?id=appinventor.ai_kmryashasvi.MatrixMan",
+      type: "android",
+    },
+    {
+      title: "Resume Parser",
+      image: resumesc,
+      desc: "Developed a resume parser in Python using Spacy",
+      link: "https://colab.research.google.com/drive/1I3G8cj53AYda24XR8q4rn-6KJIF6h4OT?usp=sharing",
+      type: "python",
+    },
+  ];
+
   const tabPressed = (tab) => {
-    if (tab === 'Web') {
+    if (tab === "Web") {
       setWebState(true);
       setAndroidState(false);
       setPythonState(false);
       setShow("web");
-    } else if (tab === 'Android') {
+    } else if (tab === "Android") {
       setWebState(false);
       setAndroidState(true);
       setPythonState(false);
@@ -109,15 +116,12 @@ export const Projects = () => {
       setPythonState(true);
       setShow("python");
     }
-
   };
 
   const renderCards = () => {
     return projects
       .filter((project) => project.type === show)
-      .map((project, index) => (
-        <ProjectCards key={index} project={project} />
-      ));
+      .map((project, index) => <ProjectCards key={index} project={project} />);
   };
 
   return (
@@ -143,9 +147,9 @@ export const Projects = () => {
           style={{
             padding: "0",
             border: "solid 2px rgb(63, 127, 231)",
-            height: "100%"
+            height: "100%",
           }}
-          id='hello'
+          id="hello"
         >
           <div className="row custom-no-gutters select-proj">
             <div className="col-4  myposter" onClick={() => tabPressed("Web")}>

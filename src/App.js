@@ -15,7 +15,6 @@ function App() {
           <Main />
           <Footer />
     </Router>
-    //npm run deploy
   );
 }
 
