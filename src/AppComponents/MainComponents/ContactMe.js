@@ -20,7 +20,7 @@ export const ContactMe = () => {
           width="100%"
           style={{ height: "12cm" }}
           id="contform"
-          src="https://stlyash.github.io/contact-me/"
+          src="https://yashlikescode.github.io/contact-me/"
         ></iframe>
       </div>
     );
@@ -86,7 +86,7 @@ export const ContactMe = () => {
           LinkedIn 🔗</span>
         </div></Link>
 
-        <Link to="https://github.com/stlyash" 
+        <Link to="https://github.com/yashlikescode" 
           className="clicklinks" target="_blank" rel="noopener noreferrer">
         <div className="contact-links">
           <span className="clickables">
