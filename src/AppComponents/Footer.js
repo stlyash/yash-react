@@ -87,7 +87,7 @@ export const Footer = () => {
             rel="noopener noreferrer"
             target="_blank"
             style={{ color: "white" }}
-            to="https://github.com/stlyash/react-website"
+            to="https://github.com/yashlikescode/react-website"
           >
             Copyright © 2023 Yashasvi
           </Link>
@@ -108,7 +108,7 @@ export const Footer = () => {
             className="web-link"
             target="_blank"
             style={{ color: "white" }}
-            to="https://stlyash.github.io/personal-web/"
+            to="https://yashlikescode.github.io/personal-web/"
           >
             v2
           </Link>
