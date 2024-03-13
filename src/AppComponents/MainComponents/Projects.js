@@ -15,6 +15,7 @@ import openpap from "./ProjectAssetss/openpap.jpg";
 export const Projects = () => {
   const [webState, setWebState] = useState(true);
   const [androidState, setAndroidState] = useState(false);
+  const [winState, setWinState] = useState(false);
   const [pythonState, setPythonState] = useState(false);
   const [show, setShow] = useState("web");
 
@@ -25,6 +26,7 @@ export const Projects = () => {
       desc: "Upload or Download Question papers of any exam.",
       link: "https://openpapers.netlify.app",
       type: "web",
+      repoLink: "https://github.com/yashlikescode/open-question-papers",
     },
     {
       title: "Online Song Player",
@@ -32,6 +34,7 @@ export const Projects = () => {
       desc: "A platform for listening song without login and ads.",
       link: "https://yashfm.netlify.app",
       type: "web",
+      repoLink: "https://github.com/yashlikescode/react-audio-player",
     },
     {
       title: "GATE Exam [Ongoing]",
@@ -39,6 +42,7 @@ export const Projects = () => {
       desc: "A platform for students to give mock GATE Exam.",
       link: "https://reactgate.netlify.app",
       type: "web",
+      repoLink: "https://github.com/yashlikescode/react-gate",
     },
     {
       title: "My React Website",
@@ -46,6 +50,7 @@ export const Projects = () => {
       desc: "Developed my personal website using React.Js and Bootstrap",
       link: "https://codemachine.tech",
       type: "web",
+      repoLink: "https://github.com/yashlikescode/yash-react",
     },
     {
       title: "Driving Technique",
@@ -53,6 +58,7 @@ export const Projects = () => {
       desc: "Website for Evaluation of Driving Technique of Loco Pilots",
       link: "https://stlyash.github.io/Driving/",
       type: "web",
+      repoLink: "https://github.com/yashlikescode/Driving",
     },
 
     {
@@ -97,22 +103,38 @@ export const Projects = () => {
       link: "https://colab.research.google.com/drive/1I3G8cj53AYda24XR8q4rn-6KJIF6h4OT?usp=sharing",
       type: "python",
     },
+    {
+      title: "C++ STL Reference Redefined",
+      image: cppStlLogo,
+      desc: "App which introduces STL libraries of C++ ",
+      link: "https://www.microsoft.com/store/productId/9N336FFZDGS5?ocid=pdpshare",
+      type: "windows",
+    },
   ];
 
   const tabPressed = (tab) => {
     if (tab === "Web") {
       setWebState(true);
       setAndroidState(false);
+      setWinState(false);
       setPythonState(false);
       setShow("web");
     } else if (tab === "Android") {
       setWebState(false);
       setAndroidState(true);
+      setWinState(false);
       setPythonState(false);
       setShow("android");
+    } else if (tab === "Windows") {
+      setWebState(false);
+      setAndroidState(false);
+      setWinState(true);
+      setPythonState(false);
+      setShow("windows");
     } else {
       setWebState(false);
       setAndroidState(false);
+      setWinState(false);
       setPythonState(true);
       setShow("python");
     }
@@ -152,7 +174,7 @@ export const Projects = () => {
           id="hello"
         >
           <div className="row custom-no-gutters select-proj">
-            <div className="col-4  myposter" onClick={() => tabPressed("Web")}>
+            <div className="col-3  myposter" onClick={() => tabPressed("Web")}>
               <h4
                 style={{
                   borderBottom: webState
@@ -169,7 +191,7 @@ export const Projects = () => {
               </h4>
             </div>
             <div
-              className="col-4  myposter"
+              className="col-3  myposter"
               onClick={() => tabPressed("Android")}
             >
               <h4
@@ -192,7 +214,28 @@ export const Projects = () => {
               </h4>
             </div>
             <div
-              className="col-4 myposter"
+              className="col-3  myposter"
+              onClick={() => tabPressed("Windows")}
+            >
+              <h4
+                style={{
+                  borderBottom: winState
+                    ? "solid 1px rgb(63, 127, 231)"
+                    : "none",
+                  height: "100%",
+                  borderLeft: "solid 1px rgb(63, 127, 231,0.2)",
+                  borderRight: "solid 1px rgb(63, 127, 231,0.2)",
+                  textAlign: "center",
+                  backgroundColor: `rgb(63, 127, 231,${winState ? 0.2 : 0.1})`,
+                  paddingTop: "1em",
+                  paddingBottom: "1em",
+                }}
+              >
+                Windows
+              </h4>
+            </div>
+            <div
+              className="col-3 myposter"
               onClick={() => tabPressed("Python")}
             >
               <h4
