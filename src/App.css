@@ -511,6 +511,9 @@ footer {
   .web-foot {
     align-items: left;
   }
+  .ProjectCategory {
+    font-size: 0.9rem;
+  }
 }
 
 .circles {

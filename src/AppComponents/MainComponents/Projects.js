@@ -186,6 +186,7 @@ export const Projects = () => {
                   paddingTop: "1em",
                   paddingBottom: "1em",
                 }}
+                className="ProjectCategory"
               >
                 Web
               </h4>
@@ -209,6 +210,7 @@ export const Projects = () => {
                   paddingTop: "1em",
                   paddingBottom: "1em",
                 }}
+                className="ProjectCategory"
               >
                 Android
               </h4>
@@ -230,6 +232,7 @@ export const Projects = () => {
                   paddingTop: "1em",
                   paddingBottom: "1em",
                 }}
+                className="ProjectCategory"
               >
                 Windows
               </h4>
@@ -251,6 +254,7 @@ export const Projects = () => {
                   paddingTop: "1em",
                   paddingBottom: "1em",
                 }}
+                className="ProjectCategory"
               >
                 Python
               </h4>
