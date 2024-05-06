@@ -42,7 +42,17 @@ export const Internships = () => {
                 Topic: Evaluation of Driving Technique using Speed-Time Chart
               </h6>
               <span>August 2021 - September 2021</span>
-
+              <button
+                class="btn btn-link expbut"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                onClick={() => setIsExpanded(!isExpanded)}
+              >
+                {isExpanded ? "Show Less ⟰" : "Show More ⟱"}
+              </button>
               <div class="collapse" id="collapseExample">
                 <p>
                   <ul>
@@ -90,17 +100,6 @@ export const Internships = () => {
                   </ul>
                 </p>
               </div>
-              <button
-                class="btn btn-link expbut"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-                onClick={() => setIsExpanded(!isExpanded)}
-              >
-                {isExpanded ? "Show Less ⟰" : "Show More ⟱"}
-              </button>
             </div>
           </div>
 
@@ -113,6 +112,17 @@ export const Internships = () => {
                 Topic: Testing Setup for Digital I/O Cards of TCN based VCUs{" "}
               </h6>
               <span>June 2022 - July 2022</span>
+              <button
+                class="btn btn-link expbut"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample2"
+                aria-expanded="false"
+                aria-controls="collapseExample2"
+                onClick={() => setIsExpanded2(!isExpanded2)}
+              >
+                {isExpanded2 ? "Show Less ⟰" : "Show More ⟱"}
+              </button>
               <div class="collapse" id="collapseExample2">
                 <p>
                   <ul>
@@ -151,17 +161,6 @@ export const Internships = () => {
                   </ul>
                 </p>
               </div>
-              <button
-                class="btn btn-link expbut"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample2"
-                aria-expanded="false"
-                aria-controls="collapseExample2"
-                onClick={() => setIsExpanded2(!isExpanded2)}
-              >
-                {isExpanded2 ? "Show Less ⟰" : "Show More ⟱"}
-              </button>
             </div>
           </div>
 
@@ -177,6 +176,17 @@ export const Internships = () => {
                 and A25 Trolleys{" "}
               </h6>
               <span>June 2023 - Jul 2023</span>
+              <button
+                class="btn btn-link expbut"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample3"
+                aria-expanded="false"
+                aria-controls="collapseExample3"
+                onClick={() => setIsExpanded3(!isExpanded3)}
+              >
+                {isExpanded3 ? "Show Less ⟰" : "Show More ⟱"}
+              </button>
               <div class="collapse" id="collapseExample3">
                 <p>
                   <ul>
@@ -226,17 +236,6 @@ export const Internships = () => {
                   </ul>
                 </p>
               </div>
-              <button
-                class="btn btn-link expbut"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseExample3"
-                aria-expanded="false"
-                aria-controls="collapseExample3"
-                onClick={() => setIsExpanded3(!isExpanded3)}
-              >
-                {isExpanded3 ? "Show Less ⟰" : "Show More ⟱"}
-              </button>
             </div>
           </div>
         </div>
