@@ -37,7 +37,7 @@ export const Education = () => {
         title="B. Tech. - Electronics and Communication Engineering (Specialization: Rail Engineering)"
         subtitle="Gati Shakti Vishwavidyalaya, Vadodara, Gujarat"
         date="2020 - 2024"
-        content="CGPA: 7.96 (Till 7th Semester)"
+        content="CGPA: 8.02"
       />
 
       <Article

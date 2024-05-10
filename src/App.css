@@ -29,9 +29,10 @@ body {
 .text-overlay {
   position: absolute;
   top: 30%;
-  left: 28%;
+  left: 31%;
   color: white;
-  text-align: left;
+  display:grid;
+  place-items:center;
   background-color: rgb(0, 0, 0);
 }
 .web-foot {

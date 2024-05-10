@@ -114,11 +114,11 @@ export const Home = () => {
         >
           <div style={{ fontSize: "60px" }}>
             <b>
-              Hello, I'm <span className="myName">Yashasvi,</span>
+              Hii, I'm <span className="myName">Yashasvi,</span>
             </b>
           </div>
           <br />
-          <h4>I am a Front-End Developer. I develop apps that sell.</h4>
+          <p style={{fontSize: "1.4 rem"}}>I develop apps that sell.</p>
         </div>
       </article>
     </div>

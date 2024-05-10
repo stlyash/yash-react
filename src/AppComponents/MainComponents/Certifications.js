@@ -105,6 +105,17 @@ export const Certifications = () => {
                         </Link>
                         ]
                       </li>
+                      <li>
+                        Principles of UX/UI Design [
+                        <Link
+                          rel="noopener noreferrer"
+                          to="https://www.coursera.org/account/accomplishments/certificate/KNJH5X7848ZJ"
+                          target="_blank"
+                        >
+                          Link
+                        </Link>
+                        ]
+                      </li>
                     </ul>
                   </div>
                 </div>
