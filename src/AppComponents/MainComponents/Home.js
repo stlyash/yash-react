@@ -118,7 +118,7 @@ export const Home = () => {
             </b>
           </div>
           <br />
-          <p style={{fontSize: "1.4 rem"}}>I develop apps that sell.</p>
+          <div style={{fontSize: "20px"}}>I develop apps that sell.</div>
         </div>
       </article>
     </div>

@@ -95,6 +95,7 @@ body {
     #c850c0 70%,
     #ffcc70 100%
   );
+  background-clip:text;
   -webkit-background-clip: text;
   color: transparent;
 }
