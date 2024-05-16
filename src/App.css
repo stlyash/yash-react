@@ -264,7 +264,7 @@ body {
 }
 
 footer {
-  background-color: rgb(63, 127, 231);
+  background-color: #3f7fe7;
   color: white;
 }
 .contact-links {
@@ -1209,4 +1209,78 @@ footer {
   to {
     transform: translateY(-2000px);
   }
+}
+
+
+.social-container{
+  margin: 0 10% 0 10%;
+}
+.link-socials{
+text-align:center;
+width: 3cm;
+
+}
+.galaxy-logo{
+  height: 1cm;
+}
+.social-label{
+background-color:#3f7fe7;
+color: white;
+font-weight: 500;
+border-radius:0.2cm;
+padding: 0.1cm 0 0.1cm 0;
+transition: opacity 1s;
+}
+.button-socials {
+  position: relative;
+  border: none;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.button-socials a {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+  }
+
+.button-socials a:hover {
+  transform: translateY(-10px);
+}
+.social-label {
+  opacity:0;
+}
+
+.button-socials:hover + .social-label {
+  opacity:1;
+}
+
+.button-socials a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s ease;
+}
+
+.button-socials a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
+
+.button-socials a svg {
+  width: 2em;
 }
