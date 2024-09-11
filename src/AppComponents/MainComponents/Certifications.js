@@ -27,9 +27,7 @@ export const Certifications = () => {
                     data-bs-target="#collapseOne"
                     aria-controls="collapseOne"
                   >
-                    <h5>
-                      1. Meta Front-End Development Professional Certificate
-                    </h5>
+                    <h5>1. Coursera - Meta - Front-End Development</h5>
                   </button>
                 </h2>
                 <div
@@ -130,7 +128,7 @@ export const Certifications = () => {
                     data-bs-target="#collapseTwo"
                     aria-controls="collapseTwo"
                   >
-                    <h5>2. Google Data Analytics Professional Certificate</h5>
+                    <h5>2. Coursera - Google - Data Analytics</h5>
                   </button>
                 </h2>
                 <div
@@ -210,7 +208,7 @@ export const Certifications = () => {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    <h5>3. Guided Projects on Linux</h5>
+                    <h5>3. Coursera - Linux</h5>
                   </button>
                 </h2>
                 <div
@@ -257,24 +255,89 @@ export const Certifications = () => {
                   </div>
                 </div>
               </div>
-
               <div className="accordion-item">
                 <h2 className="accordion-header">
                   <button
                     className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
+                    data-bs-target="#collapseFive"
                     aria-expanded="false"
-                    aria-controls="collapseFour"
+                    aria-controls="collapseFive"
                   >
-                    <h5>
-                      4. Google Project Management: Professional Certificate
-                    </h5>
+                    <h5>4. LinkedIn Learning - Linux Shell Scripting</h5>
                   </button>
                 </h2>
                 <div
-                  id="collapseFour"
+                  id="collapseFive"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div className="accordion-body">
+                    <ul>
+                      <li>
+                        Overview and Installation [
+                        <Link
+                          rel="noopener noreferrer"
+                          to="./link-linux1.pdf"
+                          target="_blank"
+                        >
+                          Link
+                        </Link>
+                        ]{" "}
+                      </li>
+                      <li>
+                        Command Line [
+                        <Link
+                          rel="noopener noreferrer"
+                          to="./link-linux2.pdf"
+                          target="_blank"
+                        >
+                          Link
+                        </Link>
+                        ]
+                      </li>
+                      <li>
+                        Shells and Processes [
+                        <Link
+                          rel="noopener noreferrer"
+                          to="./link-linux3.pdf"
+                          target="_blank"
+                        >
+                          Link
+                        </Link>
+                        ]{" "}
+                      </li>
+                      <li>
+                        Shell Scripting [
+                        <Link
+                          rel="noopener noreferrer"
+                          to="./link-linux4.pdf"
+                          target="_blank"
+                        >
+                          Link
+                        </Link>
+                        ]{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    <h5>5. Coursera - Google - Project Management</h5>
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
                   className="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
